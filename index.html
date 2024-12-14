@@ -1,39 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Thành Viên</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .footer-note {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
 <body>
-
-<h1>THÔNG TIN THÀNH VIÊN HÓA K32</h1>
-
-<p><em> Hãy cho tôi biết thông tin của bạn nhé!</em></p>
-
-<form>
-  <label for="username">Tên của bạn là:</label>
-  <input type="text" id="username" name="username">
-</form>
-
-<form>
-  <label for="birthdate">Ngày sinh:</label>
-  <input type="date" id="birthdate" name="birthdate">
-</form>
-<form>
-  <label for="gender">Giới tính:</label>
+    <div class="container">
+        <h1>Đăng Ký Thành Viên</h1>
+        <form action="#" method="post" id="register-form">
+            <!-- Thông tin cá nhân -->
+            <label for="fullname">Họ và tên</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên" required>
+	<label for="birthdate">Ngày sinh:</label>
+ 	<input type="date" id="birthdate" name="birthdate"placeholder="Nhập ngày sinh của bạn" required>
+	<label for="gender">Giới tính:</label>
 <br>
  <select id="gender" name="gender">
   <option value="Boy">Nam</option>
     <option value="Girl">Nữ</option>
  </select><br>
-</form>
+ <label for="gender">Sở thích</label>
+<br>
+ <select id="gender" name="gender">
+  <option value="Sport">Chơi thể thao</option>
+    <option value="Readbook">Đọc sách</option>
+ <option value="playgame">Chơi game</option>
+ <option value="music">Nghe nhạc</option>
+ <option value="travel">Du lịch</option>
+ <option value="other">Khác</option>
+ </select><br>
 
-<form>
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email">
-</form>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Nhập email" required>
 
-<form>
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+
   <label for="feedback">Bạn có đôi lời nhắn nhủ gì đến chúng tôi không?</label><br>
   <textarea id="feedback" name="feedback" rows="4" cols="50"></textarea>
-</form>
-<p><em> Cảm ơn bạn vì đã dành thời gian điền thông tin!</em></p>
+        
 
-  <input type="submit" value="Gửi thông tin">
-</form>
+           
+            <!-- Ý kiến đóng góp -->
+            <label for="feedback">Ý kiến đóng góp</label>
+            <textarea id="feedback" name="feedback" rows="4" placeholder="Nhập ý kiến đóng góp của bạn..."></textarea>
+
+            
+            <button type="submit">Gửi Thông tin</button>
+        </form>
+        <p class="footer-note">Cảm ơn bạn đã quan tâm và đóng góp ý kiến cho lớp của chúng tôi!</p>
+    </div>
 </body>
-
+</html>
